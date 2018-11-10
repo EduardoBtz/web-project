@@ -14,7 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link href="styles/customStyles.css" rel="stylesheet">
-<!--    <link href="styles/cartStyle.css" rel="stylesheet">-->
+    <!--    <link href="styles/cartStyle.css" rel="stylesheet">-->
 </head>
 <body>
 
@@ -31,9 +31,7 @@
 
 <div class="welcome-banner">
     <div class="welcome-text">
-        <h1 style="font-size:50px">Welcome to PCFactory</h1>
-        <p>A paradise for your PC</p>
-        <button onclick="window.location.href='shoppingCart.php'">Start shopping</button>
+        <h1 style="font-size:50px">Contact us</h1>
     </div>
 </div>
 
