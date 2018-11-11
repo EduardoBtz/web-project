@@ -3,7 +3,12 @@
 session_start();
 $product_ids = array();
 //session_destroy();
-$connect = mysqli_connect('localhost', 'root', 'mypass123', 'cart');
+/* Database credentials*/
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'pcfactory');
+$connect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 //check if Add to Cart button has been submitted
 if(filter_input(INPUT_POST,'add_to_cart'))
@@ -98,10 +103,11 @@ function pre_r($array)
 
     <!-- Bootstrap core CSS -->
     <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <!-- Custom styles for this template -->
     <link href="styles/customStyles.css" rel="stylesheet">
     <!--    <link href="styles/cartStyle.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="shopCart.css" />
+    <link rel="stylesheet" href="styles/shopCart.css" />
 </head>
 <body>
 
@@ -125,9 +131,9 @@ function pre_r($array)
             while($product = mysqli_fetch_array($result)):
                 ?>
                 <div class="col-sm-4 col-md-3">
-                    <form method="post" action="index.php?action=add&id=<?php echo $product['id']; ?>">
+                    <form method="post" action="shoppingCart.php?action=add&id=<?php echo $product['id']; ?>">
                         <div class="products">
-                            <img src="<?php echo $product['image']; ?>" class="img-responsive" /><br />
+                            <img src="<?php echo "imgs/".$product['image']; ?>" class="img-responsive" /><br />
                             <h4 class="text-info"><?php echo $product['name']; ?></h4>
                             <h4>$ <?php echo $product['price']; ?></h4>
                             <input type="text" name="quantity" class="form-control" value="1" />
@@ -169,7 +175,7 @@ function pre_r($array)
                         <td>$ <?php echo $product['price']; ?></td>
                         <td>$ <?php echo number_format($product['quantity'] * $product['price'], 2); ?></td>
                         <td>
-                            <a href="index.php?action=delete&id=<?php echo $product['id']; ?>">
+                            <a href="shoppingCart.php?action=delete&id=<?php echo $product['id']; ?>">
                                 <div class="btn-danger">Remove</div>
                             </a>
                         </td>
