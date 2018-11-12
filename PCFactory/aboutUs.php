@@ -13,8 +13,9 @@
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+
     <link href="styles/customStyles.css" rel="stylesheet">
-<!--    <link href="styles/cartStyle.css" rel="stylesheet">-->
+    <!--    <link href="styles/cartStyle.css" rel="stylesheet">-->
 </head>
 <body>
 
@@ -31,11 +32,32 @@
 
 <div class="welcome-banner">
     <div class="welcome-text">
-        <h1 style="font-size:50px">Welcome to PCFactory</h1>
-        <p>A paradise for your PC</p>
-        <button onclick="window.location.href='shoppingCart.php'">Start shopping</button>
+        <h1 style="font-size:50px">About Us</h1>
+        <h4>We offer a vast variety of top-quality products in order to fulfill your technologic needs. Find the perfect PC or peripheral for your office. Doesn't matter if you are a business man or a Gamer, we have what you need.</h4>
     </div>
 </div>
+<br /><br />
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="card">
+   <img src="imgs/imgHector.jpg" alt="John" style="width:100%">
+   <h1>Hector Ortiz Garza</h1>
+   <p class="title">CEO & Founder</p>
+   <p>ITESM University</p>
+   <p><button>Contact</button></p>
+</div>
+
+<div class="card">
+   <img src="imgs/imgLalo.jpg" alt="Lalo" style="width:100%">
+   <h1>Eduardo Benitez</h1>
+   <p class="title">Janitor</p>
+   <p>No studies</p>
+   <p><button>Contact</button></p>
+</div>
+<br />
 
 <div class="container">
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
